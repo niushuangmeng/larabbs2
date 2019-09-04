@@ -13,7 +13,7 @@
     @include('layouts._header')
     <div class="container">
         @include('shared._messages')
-        @yield('contend')
+        @yield('content')
     </div>
     @include('layouts._footer')
 </div>
