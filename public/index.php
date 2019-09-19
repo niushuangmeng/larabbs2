@@ -21,7 +21,7 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';//实现类的自动加载
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../bootstrap/app.php';//程序启动准备阶段
+$app = require_once __DIR__.'/../bootstrap/app.php';//程序启动准备阶段，实例化服务容器，注册核心类服务
 
 /*
 |--------------------------------------------------------------------------

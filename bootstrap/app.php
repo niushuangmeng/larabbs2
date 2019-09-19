@@ -13,7 +13,7 @@
 
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
-);
+);//服务容器实例化，在构造函数中，对服务容器中的服务进行了绑定
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
-$app->singleton(
+$app->singleton(//基本注册，绑定核心类服务
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
 );
@@ -51,4 +51,4 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
-return $app;
+return $app;//返回服务容器实例
